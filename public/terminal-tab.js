@@ -183,7 +183,7 @@ export function decodeBase64(b64) {
   return bytes;
 }
 
-const TERMINAL_DARK_THEMES = new Set(["night", "dawn", "midnight"]);
+const TERMINAL_DARK_THEMES = new Set(["night", "dawn", "midnight", "gruvbox", "aura"]);
 const ANSI_DARK = {
   black: "#000000",
   red: "#cd3131",

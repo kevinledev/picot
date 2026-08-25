@@ -16,9 +16,9 @@ describe("applyTheme", () => {
     document.documentElement.removeAttribute("data-theme");
   });
 
-  it("mutates data-theme for a known theme id", () => {
-    applyTheme("terracotta");
-    expect(document.documentElement.getAttribute("data-theme")).toBe("terracotta");
+  it.each(["terracotta", "gruvbox", "aura"])("mutates data-theme for known theme %s", (themeId) => {
+    applyTheme(themeId);
+    expect(document.documentElement.getAttribute("data-theme")).toBe(themeId);
   });
 
   it("falls back to the default when the id is unknown, with no origin", () => {

@@ -1,5 +1,5 @@
 /**
- * Theme system — four themes: two light, two dark
+ * Theme system — eight built-in themes: five dark, three light
  *
  * Storage note: the active theme is persisted in a cookie (not
  * localStorage). Picot spawns one pi process per workspace, each on
@@ -29,6 +29,18 @@ export const themes = {
     name: "Midnight",
     dark: true,
     colors: ["#000000", "#5a7a9a", "#4a5565", "#4a5a72"],
+    vars: {},
+  },
+  gruvbox: {
+    name: "Gruvbox Dark",
+    dark: true,
+    colors: ["#282828", "#d79921", "#458588", "#689d6a"],
+    vars: {},
+  },
+  aura: {
+    name: "Aura Dark",
+    dark: true,
+    colors: ["#15141b", "#a277ff", "#82e2ff", "#61ffca"],
     vars: {},
   },
   clean: {

@@ -134,6 +134,17 @@
 }
 
 /* User bubble markdown */
+.message.user .message-content a {
+  color: var(--user-bubble-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.message.user .message-content a:hover {
+  opacity: 0.8;
+}
+
 .message.user .message-content blockquote {
   border-left: 2px solid currentColor;
   padding-left: var(--space-2);
@@ -162,7 +173,7 @@
   font-style: italic;
 }
 .message.assistant .message-content a {
-  color: var(--accent-text);
+  color: var(--link);
   text-decoration: none;
   border-bottom: 1px solid var(--accent-subtle);
 }

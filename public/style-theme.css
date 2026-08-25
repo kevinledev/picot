@@ -85,8 +85,10 @@
   --accent-glow: rgba(255, 255, 255, 0.06);
   --accent-subtle: rgba(255, 255, 255, 0.04);
   --accent-text: #c0c0c0;
+  --link: #d6d6d6;
 
   --user-bubble: rgba(255, 255, 255, 0.06);
+  --user-bubble-link: #9adfff;
   --user-bubble-text: var(--text-primary);
   --user-bubble-border: linear-gradient(
     135deg,
@@ -134,8 +136,10 @@
   --accent-glow: rgba(106, 122, 136, 0.1);
   --accent-subtle: rgba(106, 122, 136, 0.06);
   --accent-text: #8a9aa8;
+  --link: #a9c3d8;
 
   --user-bubble: rgba(255, 255, 255, 0.08);
+  --user-bubble-link: #a5eaff;
   --user-bubble-text: var(--text-primary);
   --user-bubble-border: linear-gradient(
     135deg,
@@ -183,8 +187,10 @@
   --accent-glow: rgba(122, 138, 176, 0.2);
   --accent-subtle: rgba(122, 138, 176, 0.1);
   --accent-text: #a0b4d8;
+  --link: #b8cdf0;
 
   --user-bubble: rgba(122, 138, 176, 0.1);
+  --user-bubble-link: #b8cdf0;
   --user-bubble-text: var(--text-primary);
   --user-bubble-border: linear-gradient(
     135deg,
@@ -212,6 +218,114 @@
   --success: #34d399;
 }
 
+/* ─── Gruvbox Dark — warm retro dark ─── */
+:root[data-theme="gruvbox"] {
+  color-scheme: dark;
+
+  --bg-solid: #282828;
+  --header-bg: rgba(40, 40, 40, 1);
+  --sidebar-bg-mobile: rgba(50, 48, 47, 0.95);
+  --bg-glass: rgba(235, 219, 178, 0.04);
+  --bg-glass-hover: rgba(235, 219, 178, 0.08);
+  --bg-glass-active: rgba(235, 219, 178, 0.12);
+  --bg-glass-strong: rgba(235, 219, 178, 0.06);
+  --bg-frosted: rgba(40, 40, 40, 0.88);
+
+  --text-primary: #ebdbb2;
+  --text-secondary: #a89984;
+  --text-placeholder: #928374;
+  --text-ghost: rgba(235, 219, 178, 0.12);
+
+  --accent: #d79921;
+  --accent-glow: rgba(215, 153, 33, 0.22);
+  --accent-subtle: rgba(215, 153, 33, 0.12);
+  --accent-text: #fabd2f;
+  --link: #fabd2f;
+
+  /* Gruvbox blue makes user turns distinct from the warm background. */
+  --user-bubble: #458588;
+  --user-bubble-link: #000000;
+  --user-bubble-text: #fbf1c7;
+  --user-bubble-border: linear-gradient(135deg, rgba(131, 165, 152, 0.7), rgba(69, 133, 136, 0.8));
+
+  --tool-accent: #689d6a;
+  --tool-accent-text: #8ec07c;
+  --tool-bg: rgba(104, 157, 106, 0.1);
+
+  --thinking-accent: #b16286;
+  --thinking-accent-text: #d3869b;
+  --thinking-bg: rgba(177, 98, 134, 0.1);
+
+  --border: #504945;
+  --border-hover: #665c54;
+  --border-bright: #7c6f64;
+
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-inset: none;
+
+  --success: #b8bb26;
+  --error: #fb4934;
+  --warning: #fabd2f;
+}
+
+/* ─── Aura Dark — violet nocturne ─── */
+:root[data-theme="aura"] {
+  color-scheme: dark;
+
+  --bg-solid: #15141b;
+  --header-bg: rgba(21, 20, 27, 1);
+  --sidebar-bg-mobile: rgba(33, 32, 46, 0.95);
+  --bg-glass: rgba(237, 236, 238, 0.045);
+  --bg-glass-hover: rgba(237, 236, 238, 0.08);
+  --bg-glass-active: rgba(162, 119, 255, 0.16);
+  --bg-glass-strong: rgba(237, 236, 238, 0.065);
+  --bg-frosted: rgba(21, 20, 27, 0.88);
+
+  --text-primary: #edecee;
+  --text-secondary: #a8a7ad;
+  --text-placeholder: #6d6b78;
+  --text-ghost: rgba(237, 236, 238, 0.12);
+
+  --accent: #a277ff;
+  --accent-glow: rgba(162, 119, 255, 0.26);
+  --accent-subtle: rgba(162, 119, 255, 0.14);
+  --accent-text: #c5b4fd;
+  --link: #c5b4fd;
+
+  /* Aura's signature purple gives user messages a strong, clear contrast. */
+  --user-bubble: #a277ff;
+  --user-bubble-link: #2b1b47;
+  --user-bubble-text: #15141b;
+  --user-bubble-border: linear-gradient(
+    135deg,
+    rgba(225, 211, 255, 0.9),
+    rgba(162, 119, 255, 0.85)
+  );
+
+  --tool-accent: #82e2ff;
+  --tool-accent-text: #a5eaff;
+  --tool-bg: rgba(130, 226, 255, 0.1);
+
+  --thinking-accent: #f694ff;
+  --thinking-accent-text: #f7b4ff;
+  --thinking-bg: rgba(246, 148, 255, 0.1);
+
+  --border: #2c2a38;
+  --border-hover: #464354;
+  --border-bright: #5f5b6e;
+
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-inset: none;
+
+  --success: #61ffca;
+  --error: #ff6767;
+  --warning: #ffca85;
+}
+
 /* ─── Clean — Apple-style light ─── */
 :root[data-theme="clean"] {
   color-scheme: light;
@@ -234,9 +348,11 @@
   --accent-glow: rgba(5, 128, 196, 0.15);
   --accent-subtle: rgba(5, 128, 196, 0.06);
   --accent-text: #0470b0;
+  --link: #0470b0;
   --header-pill-text: rgba(0, 0, 0, 0.55);
 
   --user-bubble: #2a96d6;
+  --user-bubble-link: #001e33;
   --user-bubble-text: white;
 
   --tool-accent: #007aff;
@@ -281,9 +397,11 @@
   --accent-glow: rgba(176, 106, 72, 0.15);
   --accent-subtle: rgba(176, 106, 72, 0.08);
   --accent-text: #a05e3e;
+  --link: #a05e3e;
   --header-pill-text: rgba(0, 0, 0, 0.65);
 
   --user-bubble: #b06a48;
+  --user-bubble-link: #0f0805;
   --user-bubble-text: white;
 
   --tool-accent: #5c2860;
@@ -328,9 +446,11 @@
   --accent-glow: rgba(106, 125, 90, 0.15);
   --accent-subtle: rgba(106, 125, 90, 0.08);
   --accent-text: #5a6d4a;
+  --link: #5a6d4a;
   --header-pill-text: rgba(0, 0, 0, 0.65);
 
   --user-bubble: #6a7d5a;
+  --user-bubble-link: #030801;
   --user-bubble-text: white;
 
   --tool-accent: #4a3860;

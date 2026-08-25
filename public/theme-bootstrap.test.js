@@ -22,14 +22,17 @@ afterEach(() => {
   document.cookie = "pi-studio-theme=; Max-Age=0; Path=/";
 });
 
-test("applies the saved theme before theme CSS can paint", () => {
-  const bootstrapIndex = html.indexOf('<script id="theme-bootstrap">');
-  const themeCssIndex = html.indexOf('<link rel="stylesheet" href="style-theme.css"');
+test.each(["clean", "gruvbox", "aura"])(
+  "applies saved theme %s before theme CSS can paint",
+  (themeId) => {
+    const bootstrapIndex = html.indexOf('<script id="theme-bootstrap">');
+    const themeCssIndex = html.indexOf('<link rel="stylesheet" href="style-theme.css"');
 
-  expect(bootstrapIndex).toBeGreaterThan(-1);
-  expect(bootstrapIndex).toBeLessThan(themeCssIndex);
-  expect(runThemeBootstrap("clean")).toBe("clean");
-});
+    expect(bootstrapIndex).toBeGreaterThan(-1);
+    expect(bootstrapIndex).toBeLessThan(themeCssIndex);
+    expect(runThemeBootstrap(themeId)).toBe(themeId);
+  },
+);
 
 test.each([
   ["light", "terracotta"],
